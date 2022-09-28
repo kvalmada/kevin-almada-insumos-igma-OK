@@ -1,0 +1,19 @@
+.list {
+    list-style: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    width: auto;
+    margin-top: 5px;
+    padding: 0 10px;
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    width: 100px;
+}
