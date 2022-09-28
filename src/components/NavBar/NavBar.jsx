@@ -1,8 +1,11 @@
 import Button from 'react-bootstrap/Button';
+import { ItemListContainer } from '../ItemListContainer/ItemListContainer';
 import "./NavBar.css"
+import { CartWidget } from '../CartWidget/CartWirdget';
 
 import { CartWidget } from '../CartWidget/CartWirdget';
 export const NavBar = ()=>{
+
 
     return(
         <nav className='navegacion'>
@@ -12,6 +15,7 @@ export const NavBar = ()=>{
                 <li><a href="/">inicio</a></li>
                 <li><a href="/">inicio</a></li>
             </ul>
+            <CartWidget/>
         
         </nav>
     )
