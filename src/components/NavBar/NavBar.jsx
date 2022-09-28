@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import { ItemListContainer } from '../ItemListContainer/ItemListContainer';
 import "./NavBar.css"
-import { CartWidget } from '../CartWidget/CartWirdget';
+import { CartWidget } from '../CartWidget/CartWidget';
 
-import { CartWidget } from '../CartWidget/CartWirdget';
+import { CartWidget } from '../CartWidget/CartWidget';
 export const NavBar = ()=>{
 
 
