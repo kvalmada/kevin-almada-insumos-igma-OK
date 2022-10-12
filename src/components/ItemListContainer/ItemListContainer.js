@@ -1,52 +1,32 @@
-import './App.css';
-import { useEffect, useState } from 'react';
-import './ItemListContainer.css';
-import { arregloProductos } from "../../baseDatos/basedatos";
-import { ItemList } from './components/ItemList/ItemList';
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { arregloProductos } from "../baseDatos/baseDatos"
+import { ItemDetail } from "../ItemDetail/ItemDetail";
 
-export const ItemListContainer = ()=>{
-    const (categoryId) = useParams();
-   // const (categoryName) = useParams();
-    console.log(categoryName)
-    const [productos, setProductos] = useState([]);
-  }
+export const ItemDetailContainer = ()=>{
+    const [item, setItem] = useState({});
 
-function App() {
-
-
-const promesa = new Promise((resolve, reject)=>{
-  setTimeout(() => {
-    resolve(arregloProductos);
-  }, 2000);
-})
- 
-useEffect(()=>{
-  promesa.then((response)=>{
-    if(categoryId){
-      //filtro por categoria
-    } else {
-      //mostrar todos los productos
-      setProductos(response)
+    const getItem = () =>{
+        return new Promise((resolve,reject)=>{
+            resolve(arregloProductos[0])
+        })
     }
-  })
-},[categoryId])
- // useEffect(()=>{
- // promesa.then(resultado=>{
- //   if(CategoryName){
- //     const productsFiltered = resultado.filter(elm=>elm.categoria === categoryName);
- //     setProductos(productsFiltered)
- //   } else {
- //     setProducts(resultado);
- //     }
- // })
- //  },[categoryName])
- 
-console.log('productos',productos)
-return(
-  <div className="item-list-container">
-    <p>item list container</p>
-    <ItemList items={productos}/>
-  </div>
-)
+
+    useEffect(()=>{
+        const getProducto = async()=>{
+            const producto = await getItem();
+            console.log('producto, producto')
+            setItem(producto);
+        }
+    
+        getProducto();
+    },[])
+    
+    
+    return(
+        <div className="item-detail-container">
+            <p style={{width:"100%", color: blue}}>item detail container</p>
+            <ItemDetail item={item}/>
+        </div>
+    )
 }
+
