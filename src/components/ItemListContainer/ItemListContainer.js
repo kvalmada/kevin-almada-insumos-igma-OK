@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import  arregloProductos  from "../baseDatos/baseDatos"
-import {ItemList} from "../ItemList/ItemList"
+import ItemList from "../ItemList/ItemList"
 
 
-export const ItemListContainer= ()=>{
+const ItemListContainer= ()=>{
     const [item, setItem] = useState({});
 
     const getItem = () =>{
@@ -12,6 +12,7 @@ export const ItemListContainer= ()=>{
         })
     }
 
+    
 
     useEffect(()=>{
         const getProducto = async()=>{
@@ -31,4 +32,6 @@ export const ItemListContainer= ()=>{
         </div>
     )
 }
+
+    export default ItemListContainer;
 

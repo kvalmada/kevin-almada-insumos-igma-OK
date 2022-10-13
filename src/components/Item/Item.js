@@ -1,7 +1,7 @@
 import './Item.css';
 import {Link} from "react-router-dom";
 
-export const Item = ({item}) => {
+const Item = ({item}) => {
     return(
     <div className="tarjeta-producto">
         <h4>{item.title}</h4>
@@ -11,3 +11,5 @@ export const Item = ({item}) => {
         </div>
         )
 }
+
+export default Item;

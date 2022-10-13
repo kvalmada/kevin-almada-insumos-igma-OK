@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import './ItemDetailContainer.css'
 import  arregloProductos  from "../baseDatos/baseDatos"
-import { ItemDetail } from "../ItemDetail/ItemDetail";
+import  ItemDetail  from "../ItemDetail/ItemDetail";
 
-export const ItemDetailContainer =()=> {
+const ItemDetailContainer =()=> {
     const [item, setItem] = useState([]);
 
     const getItem = ()=> {
@@ -35,3 +35,5 @@ return(
 
 
 }
+
+export default ItemDetailContainer;

@@ -1,8 +1,8 @@
 import './ItemList.css';
-import  {Item} from "../Item/Item"
+import  Item from "../Item/Item"
 import {Link} from 'react-router-dom'
 
-export const ItemList = ({items})=>{
+const ItemList = ({items})=>{
 
     return(
         <div className="estilos-listado">
@@ -19,3 +19,5 @@ export const ItemList = ({items})=>{
     </div>    
     )
   }
+
+  export default ItemList;
