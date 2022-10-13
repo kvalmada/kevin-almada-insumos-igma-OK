@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { arregloProductos } from "../baseDatos/baseDatos"
-import { ItemDetail } from "../ItemDetail/ItemDetail";
+import  arregloProductos  from "../baseDatos/baseDatos"
+import {ItemList} from "../ItemList/ItemList"
 
-export const ItemDetailContainer = ()=>{
+
+export const ItemListContainer= ()=>{
     const [item, setItem] = useState({});
 
     const getItem = () =>{
@@ -10,6 +11,7 @@ export const ItemDetailContainer = ()=>{
             resolve(arregloProductos[0])
         })
     }
+
 
     useEffect(()=>{
         const getProducto = async()=>{
@@ -23,9 +25,9 @@ export const ItemDetailContainer = ()=>{
     
     
     return(
-        <div className="item-detail-container">
-            <p style={{width:"100%", color: blue}}>item detail container</p>
-            <ItemDetail item={item}/>
+        <div className="item-list-container">
+            <p style={{width:"100%", color: "blue"}}>item detail container</p>
+            <ItemList item={item}/>
         </div>
     )
 }

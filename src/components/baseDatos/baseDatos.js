@@ -1,3 +1,4 @@
+
 const arregloProductos = [
     {id:1, title:"camara",price:200},
     {id:2, title:"mascara",price:100},
@@ -5,5 +6,4 @@ const arregloProductos = [
     {id:4, title:"camilla",price:200},
 ]
 
-
-http://www.servidorEnlinea.com/pets?specie=dog
+export default arregloProductos 

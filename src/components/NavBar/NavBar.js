@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import { ItemListContainer } from '../ItemListContainer/ItemListContainer';
 import "./NavBar.css"
-import "./CartWidget/CartWidget"
+import "../CartWidget/CartWidget"
 import {Link, NavLink} from "react-router-dom";
 
 import { CartWidget } from '../CartWidget/CartWidget';
