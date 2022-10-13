@@ -3,27 +3,29 @@ import  arregloProductos  from "../baseDatos/baseDatos"
 import ItemList from "../ItemList/ItemList"
 
 
-const ItemListContainer= ()=>{
-    const [item, setItem] = useState({});
+const ItemListContainer =()=> {
+    const [item, setItem] = useState([]);
 
-    const getItem = () =>{
-        return new Promise((resolve,reject)=>{
-            resolve(arregloProductos[0])
-        })
+    const getItem = ()=> {
+        return new Promise((res) => {
+            setTimeout(() => {
+                res(arregloProductos);
+            }, 2000);
+        });
     }
 
-    
 
-    useEffect(()=>{
-        const getProducto = async()=>{
-            const producto = await getItem();
-            console.log('producto, producto')
-            setItem(producto);
-        }
-    
-        getProducto();
-    },[])
-    
+useEffect(()=>{
+    const getProducto = async()=>{
+        const producto = await getItem();
+        console.log('producto, producto')
+        setItem(producto);
+    }
+
+    getProducto();
+},[])
+
+console.log('item:', item)
     
     return(
         <div className="item-list-container">
